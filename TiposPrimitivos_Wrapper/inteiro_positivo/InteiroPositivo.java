@@ -1,5 +1,3 @@
-package inteiro_positivo;
-
 import java.util.stream.IntStream;
 
 public class InteiroPositivo {
