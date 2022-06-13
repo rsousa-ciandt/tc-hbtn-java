@@ -3,7 +3,7 @@ package inteiro_positivo;
 import java.util.stream.IntStream;
 
 public class InteiroPositivo {
-    int valor;
+    private int valor;
 
     public InteiroPositivo (Integer valor) throws IllegalArgumentException {
         setValor(valor);
