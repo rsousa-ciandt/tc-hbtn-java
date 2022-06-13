@@ -1,17 +1,15 @@
 package inteiro_positivo;
 
-import java.util.List;
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class InteiroPositivo {
     Integer valor;
 
-    public InteiroPositivo (Integer valor) throws Exception {
+    public InteiroPositivo (Integer valor) throws IllegalArgumentException {
         setValor(valor);
     }
 
-    public  InteiroPositivo (String valor) throws Exception {
+    public  InteiroPositivo (String valor) throws IllegalArgumentException {
         try {
             int valorParseado = Integer.parseInt(valor);
 
@@ -19,7 +17,7 @@ public class InteiroPositivo {
 
             setValor(valorParseado);
         } catch (NumberFormatException nfe) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
     }
 
@@ -43,9 +41,9 @@ public class InteiroPositivo {
         return valor;
     }
 
-    public void setValor(Integer valor) throws Exception {
+    public void setValor(Integer valor) throws IllegalArgumentException {
         if (valor < 0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
 
         this.valor = valor;
