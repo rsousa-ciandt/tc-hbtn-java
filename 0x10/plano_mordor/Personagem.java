@@ -21,12 +21,16 @@ public class Personagem {
         return String.format("%d - %s", pontosDeFelicidade, humor.getClass().getSimpleName());
     }
 
+    public Humor obterHumorAtual() {
+        return humor;
+    }
+
     public int getPontosDeFelicidade() {
         return pontosDeFelicidade;
     }
 
     public void setPontosDeFelicidade(int pontosDeFelicidade) {
-        this.pontosDeFelicidade = pontosDeFelicidade;
+        this.pontosDeFelicidade += pontosDeFelicidade;
 
         Humor humor;
 
