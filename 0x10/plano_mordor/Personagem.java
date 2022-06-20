@@ -38,7 +38,7 @@ public class Personagem {
             humor = new Irritado();
         } else if (pontosDeFelicidade < 1) {
             humor = new Triste();
-        } else if (pontosDeFelicidade < 16) {
+        } else if (pontosDeFelicidade <= 15) {
             humor = new Feliz();
         } else {
             humor = new MuitoFeliz();
