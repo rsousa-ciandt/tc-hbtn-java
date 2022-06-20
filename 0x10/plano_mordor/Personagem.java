@@ -34,11 +34,11 @@ public class Personagem {
 
         Humor humor;
 
-        if (pontosDeFelicidade < -5) {
+        if (this.pontosDeFelicidade < -5) {
             humor = new Irritado();
-        } else if (pontosDeFelicidade < 1) {
+        } else if (this.pontosDeFelicidade < 1) {
             humor = new Triste();
-        } else if (pontosDeFelicidade <= 15) {
+        } else if (this.pontosDeFelicidade < 16) {
             humor = new Feliz();
         } else {
             humor = new MuitoFeliz();
