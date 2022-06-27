@@ -47,7 +47,7 @@ public class Pedido {
     }
 
     public double calcularTotal() {
-        return getTotalProdutos() / getValorDesconto();
+        return getTotalProdutos() - getValorDesconto();
     }
 
     public void setPercentualDesconto(double percentualDesconto) {
