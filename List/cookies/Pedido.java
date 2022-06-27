@@ -2,23 +2,23 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Pedido {
-    private ArrayList<PedidoCookie> pedidoCookies;
+    private ArrayList<PedidoCookie> cookies;
 
     public Pedido() {
-        setPedidoCookies(new ArrayList<>());
+        setCookies(new ArrayList<>());
     }
 
     public void adicionarPedidoCookie(PedidoCookie pedidoCookie) {
-        getPedidoCookies().add(pedidoCookie);
+        getCookies().add(pedidoCookie);
     }
 
     public int obterTotalCaixas() {
-        return getPedidoCookies().stream().mapToInt(PedidoCookie::getQuantidadeCaixas).sum();
+        return getCookies().stream().mapToInt(PedidoCookie::getQuantidadeCaixas).sum();
     }
 
     public int removerSabor(String sabor) {
         int totalCaixasRemovidas = 0;
-        Iterator<PedidoCookie> iterator = getPedidoCookies().iterator();
+        Iterator<PedidoCookie> iterator = getCookies().iterator();
 
         while (iterator.hasNext()) {
             PedidoCookie next = iterator.next();
@@ -32,11 +32,11 @@ public class Pedido {
         return totalCaixasRemovidas;
     }
 
-    public void setPedidoCookies(ArrayList<PedidoCookie> pedidoCookies) {
-        this.pedidoCookies = pedidoCookies;
+    public void setCookies(ArrayList<PedidoCookie> cookies) {
+        this.cookies = cookies;
     }
 
-    public ArrayList<PedidoCookie> getPedidoCookies() {
-        return pedidoCookies;
+    public ArrayList<PedidoCookie> getCookies() {
+        return cookies;
     }
 }
