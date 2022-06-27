@@ -31,8 +31,9 @@ public class Pedido {
         stringBuilder.append(String.format("TOTAL PRODUTOS: %.2f\n", getTotalProdutos()));
         stringBuilder.append("----------------------------\n");
         stringBuilder.append(String.format("TOTAL PEDIDO: %.2f\n", calcularTotal()));
+        stringBuilder.append("----------------------------\n");
 
-        System.out.println(stringBuilder.toString());
+        System.out.print(stringBuilder.toString());
     }
 
     public double getTotalProdutos() {
