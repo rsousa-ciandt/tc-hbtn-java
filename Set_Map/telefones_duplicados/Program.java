@@ -11,10 +11,6 @@ public class Program {
         Telefone telefone6 = new Telefone("17", "3444-1112");
         Telefone telefone7 = new Telefone("17", "3311-1566");
 
-        System.out.println("tel1-hash " + telefone1.hashCode());
-        System.out.println("tel2-hash " + telefone2.hashCode());
-        System.out.println("tel7-hash " + telefone7.hashCode());
-
         Telefone telefoneDuplicado1 = new Telefone("11", "9888-5551");
         Telefone telefoneDuplicado2 = new Telefone("17", "3444-1112");
 
