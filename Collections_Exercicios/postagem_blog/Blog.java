@@ -72,7 +72,7 @@ public class Blog {
             Autor autor = post.getAutor();
             Set<Post> postsPorCategoria = posts.stream()
                     .filter(p -> p.getAutor().equals(autor))
-                    .collect(Collectors.toSet());
+                    .collect(Collectors.toCollection(TreeSet::new));
 
             map.put(autor, postsPorCategoria);
         }
