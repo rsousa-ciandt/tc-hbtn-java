@@ -2,14 +2,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Blog {
-    private final List<Post> postagens = new ArrayList<>();
+    private List<Post> posts = new ArrayList<>();
 
     public void adicionarPostagem(Post post) {
-        getPostagens().add(post);
+        getPosts().add(post);
     }
 
     public Set<String> obterTodosAutores() {
-        Set<String> autores = postagens.stream()
+        Set<String> autores = posts.stream()
                 .map(Post::getAutor)
                 .sorted()
                 .collect(Collectors.toCollection(TreeSet::new));
@@ -20,8 +20,8 @@ public class Blog {
     public Map<String, Integer> obterContagemPorCategoria() {
         Map<String, Integer> map = new TreeMap<>();
 
-        for (Post post: postagens) {
-            int frequencia = (int) postagens.stream()
+        for (Post post: posts) {
+            int frequencia = (int) posts.stream()
                     .map(Post::getCategoria)
                     .filter(c -> c.equals(post.getCategoria()))
                     .count();
@@ -32,8 +32,8 @@ public class Blog {
         return map;
     }
 
-    public List<Post> getPostagens() {
-        return postagens;
+    public List<Post> getPosts() {
+        return posts;
     }
 
 }
