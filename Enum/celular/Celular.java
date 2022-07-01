@@ -32,9 +32,6 @@ public class Celular {
     }
 
     public void atualizarContato(Contato contatoAntigo, Contato novoContato) throws Exception {
-//        System.out.println("\t" + getContatos());
-//        System.out.println("\t" + contatoAntigo.getNome());
-
         int posicaoContatoAntigo = obterPosicaoContato(contatoAntigo.getNome());
 
         if (posicaoContatoAntigo == -1) {
@@ -42,9 +39,6 @@ public class Celular {
         }
 
         int posicaoContatoNovo = obterPosicaoContato(novoContato.getNome());
-
-//        System.out.println("\t" + contatoAntigo.getNome() + " | " + novoContato.getNome());
-//        System.out.println("\t posição-antigo: " + posicaoContatoAntigo + " | posição-novo: " + posicaoContatoNovo);
 
         if (posicaoContatoNovo != -1 && posicaoContatoAntigo != posicaoContatoNovo) {
             throw new Exception("Nao foi possivel modificar contato. Contato jah existente com esse nome");
@@ -57,7 +51,7 @@ public class Celular {
         int posicaoContato = obterPosicaoContato(contato.getNome());
 
         if (posicaoContato == -1) {
-            throw new Exception("Nao foi possivel remover contato. Contato nao existe.");
+            throw new Exception("Nao foi possivel remover contato. Contato nao existe");
         }
 
         getContatos().remove(posicaoContato);
