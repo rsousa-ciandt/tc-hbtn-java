@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProcessadorVideo {
-    private List<CanalNotificacao> canais;
+    private ArrayList<CanalNotificacao> canais;
 
     public ProcessadorVideo() {
         canais = new ArrayList<>();
@@ -20,11 +19,11 @@ public class ProcessadorVideo {
         });
     }
 
-    public List<CanalNotificacao> getCanais() {
+    public ArrayList<CanalNotificacao> getCanais() {
         return canais;
     }
 
-    public void setCanais(List<CanalNotificacao> canais) {
+    public void setCanais(ArrayList<CanalNotificacao> canais) {
         this.canais = canais;
     }
 }
