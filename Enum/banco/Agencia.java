@@ -9,7 +9,7 @@ public class Agencia {
         this.clientes = new ArrayList<>();
     }
 
-    public boolean adicionarTransacao(String nome, double valorTransacao) {
+    public boolean adicionarTransacaoCliente(String nome, double valorTransacao) {
         Cliente clienteExiste = buscarCliente(nome);
 
         if (clienteExiste == null) {

@@ -44,7 +44,7 @@ public class Banco {
         }
 
 
-        return agencia.adicionarTransacao(nomeCliente, valorTransacao);
+        return agencia.adicionarTransacaoCliente(nomeCliente, valorTransacao);
     }
 
     public boolean adicionarCliente(String nomeAgencia, String nomeCliente, double valorInicial) {
