@@ -1,16 +1,16 @@
 public class Comida implements Item {
+    private String nome;
+    private double calorias;
+    private double preco;
+
     public Comida(String nome, int calorias, double preco) {
         this.nome = nome;
         this.calorias = calorias;
         this.preco = preco;
     }
 
-    private String nome;
-    private int calorias;
-    private double preco;
-
     @Override
     public String toString() {
-        return String.format("[%s] %d R$ %.6f", nome, calorias, preco);
+        return String.format("[%s] %.6f R$ %.6f", nome, calorias, preco);
     }
 }
