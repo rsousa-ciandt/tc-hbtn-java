@@ -43,10 +43,10 @@ public class Consulta {
 
     public static List<Produto> aplicar15PorcentoDescontoEletronicos(List<Produto> produtos) {
         return produtos.stream()
-                .map(p -> {
-                    p.setPreco(p.getPreco() * 0.85);
-
-                    return p;
+                .peek(p -> {
+                    if (p.getCategoriaProduto().equals(CategoriaProduto.ELETRONICO)) {
+                        p.setPreco(p.getPreco() * 1);
+                    }
                 })
                 .collect(Collectors.toList());
 
