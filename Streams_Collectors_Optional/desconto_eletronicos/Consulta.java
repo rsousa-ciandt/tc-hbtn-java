@@ -45,7 +45,7 @@ public class Consulta {
         return produtos.stream()
                 .peek(p -> {
                     if (p.getCategoriaProduto().equals(CategoriaProduto.ELETRONICO)) {
-                        p.setPreco(p.getPreco() * 1);
+                        p.setPreco(p.getPreco() * 0.85);
                     }
                 })
                 .collect(Collectors.toList());
