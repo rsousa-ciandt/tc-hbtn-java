@@ -17,6 +17,7 @@ public class SerializarEstudantes<T> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public List<T> desserializar() {
         List<T> list = null;
 
