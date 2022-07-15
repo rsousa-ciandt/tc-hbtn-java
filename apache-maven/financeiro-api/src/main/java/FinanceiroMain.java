@@ -1,5 +1,3 @@
-package com.techcamps.financeiro;
-
 /**
  * Hello world!
  *

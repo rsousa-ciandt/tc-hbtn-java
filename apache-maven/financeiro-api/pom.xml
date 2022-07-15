@@ -6,7 +6,7 @@
 
   <groupId>com.techcamps.financeiro</groupId>
   <artifactId>financeiro-api</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
 
   <name>Projeto Finenceiro Demo</name>
   <description>Projeto Financeiro Demo usando Apache Maven Demo</description>
@@ -72,7 +72,7 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>com.techcamps.financeiro.FinanceiroMain</mainClass>
+                <mainClass>FinanceiroMain</mainClass>
               </manifest>
             </archive>
             <descriptorRefs>
